@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "octopus-dash"
+version = "0.1.0"
+description = "A python package to visualise energy useage and cost from Octopus"
+authors = ["James <jamesthurgood34@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8.10"
+pandas = "^1.5.1"
+dash = "^2.7.0"
+requests = "^2.28.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.0"
+pylint = "^2.15.6"
+flake8 = "^5.0.4"
+isort = "^5.10.1"
+pre-commit = "^2.20.0"
+black = "^22.10.0"
+bandit = "^1.7.4"
+safety = "^2.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
