@@ -1,3 +1,5 @@
 donttrack/
 scratch
 */__pycache__/*
+.idea/*
+.ipynb_checkpoints/*
