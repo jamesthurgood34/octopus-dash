@@ -76,6 +76,8 @@ class data_getter:
     def enrich_data(self):
         self._data = self._data.assign(
             hour=lambda x: x.interval_start.apply(t.hour),
+            day=lambda x: x.interval_start.apply(lambda y: y.day),
+            month=lambda x: x.interval_start.apply(lambda y: y.month),
             off_peak=lambda x: x.interval_start.apply(t.off_peak),
             off_grid=lambda x: x.consumption == 0.0,
             unit_rate=lambda x: self.tariff.unit_rate(x),

@@ -264,7 +264,7 @@ test = ["pytest"]
 name = "contourpy"
 version = "1.0.6"
 description = "Python library for calculating contours of 2D quadrilateral grids"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -282,7 +282,7 @@ test-no-codebase = ["pytest", "matplotlib", "pillow"]
 name = "cycler"
 version = "0.11.0"
 description = "Composable style cycles"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -481,7 +481,7 @@ dotenv = ["python-dotenv"]
 name = "fonttools"
 version = "4.38.0"
 description = "Tools to manipulate font files"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -854,7 +854,7 @@ test = ["codecov", "ipykernel", "jupyter-server", "openapi-core (>=0.14.2,<0.15.
 name = "kiwisolver"
 version = "1.4.4"
 description = "A fast implementation of the Cassowary constraint solver"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -878,7 +878,7 @@ python-versions = ">=3.7"
 name = "matplotlib"
 version = "3.6.2"
 description = "Python plotting package"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.8"
 
@@ -1123,7 +1123,7 @@ python-versions = ">=3.8"
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -1208,7 +1208,7 @@ python-versions = "*"
 name = "pillow"
 version = "9.3.0"
 description = "Python Imaging Library (Fork)"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -1397,7 +1397,7 @@ testutils = ["gitpython (>3)"]
 name = "pyparsing"
 version = "3.0.9"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6.8"
 
@@ -1548,6 +1548,24 @@ github = ["pygithub (>=1.43.3)", "jinja2 (>=3.1.0)"]
 gitlab = ["python-gitlab (>=1.3.0)"]
 
 [[package]]
+name = "seaborn"
+version = "0.12.1"
+description = "Statistical data visualization"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+matplotlib = ">=3.1,<3.6.1 || >3.6.1"
+numpy = ">=1.17"
+pandas = ">=0.25"
+
+[package.extras]
+dev = ["pytest", "pytest-cov", "pytest-xdist", "flake8", "mypy", "pandas-stubs", "pre-commit"]
+docs = ["numpydoc", "nbconvert", "ipykernel", "sphinx-copybutton", "sphinx-issues", "sphinx-design", "pyyaml", "pydata_sphinx_theme (==0.10.0rc2)"]
+stats = ["scipy (>=1.3)", "statsmodels (>=0.10)"]
+
+[[package]]
 name = "send2trash"
 version = "1.8.0"
 description = "Send file to trash natively under Mac OS X, Windows and Linux."
@@ -1564,7 +1582,7 @@ win32 = ["pywin32"]
 name = "setuptools-scm"
 version = "7.0.5"
 description = "the blessed package to manage your versions by scm tags"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -1691,7 +1709,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -1746,7 +1764,7 @@ python-versions = "*"
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -1846,7 +1864,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8.10"
-content-hash = "3799fa237e22827a1e970a273cfcf14947ab6baf0eb0e6f098b72c45ad292a0d"
+content-hash = "66456237dc1fbe3f3ecc4422bb544d17cc8796f4bb6818b16127a4d8d36b8e37"
 
 [metadata.files]
 anyio = []
@@ -2015,6 +2033,7 @@ requests = []
 "ruamel.yaml" = []
 "ruamel.yaml.clib" = []
 safety = []
+seaborn = []
 send2trash = [
     {file = "Send2Trash-1.8.0-py3-none-any.whl", hash = "sha256:f20eaadfdb517eaca5ce077640cb261c7d2698385a6a0f072a4a5447fd49fa08"},
     {file = "Send2Trash-1.8.0.tar.gz", hash = "sha256:d2c24762fd3759860a0aff155e45871447ea58d2be6bdd39b5c8f966a0c99c2d"},
